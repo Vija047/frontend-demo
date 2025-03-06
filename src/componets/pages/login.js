@@ -3,74 +3,92 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 
 function Login() {
   return (
-    <div className="container d-flex justify-content-center  align-items-center vh-100">
-      <div className="row w-75 p-3 mb-5 bg-white rounded align-items-center ">
-        {/* Left Section with Rounded Left Corner */}
-        <div className="col-md-6 text-center bg-primary   text-white p-4 rounded-start">
-          <img
-            src="https://lh3.googleusercontent.com/ycipQZIXDsOCOoc7LOcXD5gTInVm_4M0v57Uwu1bsiq4l65vUKlsVEo-L-G08xvvSauhCzDeHSOxumjEclKjwA=s900"
-            className="rounded-circle mt-4 border border-3"
-            width="100"
-            height="100"
-            alt="Profile"
-          />
-          <p className="fw-bold text-uppercase">ANTI CORRUPTION COMMISSION</p>
-          <hr className="w-25 mx-auto border-2" />
-          <p className="fs-5">
-            Together, let's kick corruption out of <strong>Sierra Leone</strong>
-          </p>
-        </div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="grid grid-cols-1 md:grid-cols-2 bg-white shadow-lg rounded-lg overflow-hidden w-3/4 max-w-4xl">
+        
+        {/* Left Section */}
+        <div className="bg-blue-600 text-white flex flex-col items-center justify-center p-4 rounded-l-lg w-64">
+        <img
+  src="https://lh3.googleusercontent.com/ycipQZIXDsOCOoc7LOcXD5gTInVm_4M0v57Uwu1bsiq4l65vUKlsVEo-L-G08xvvSauhCzDeHSOxumjEclKjwA=s900"
+  className="w-24 h-24 rounded-full border-4 border-white object-cover"
+  alt="Profile"
+/>
 
-        {/* Right Section with Rounded Right Corner */}
-        <div className="col-md-6 text-center bg-white text-dark p-4 rounded-end ">
-          <p className="fw-bold text-primary">ASSET DECLARATION</p>
-          <hr className="w-25 mx-auto border-3 border-blue-500" />
+  <p className="font-bold uppercase mt-2 text-base text-center">ANTI CORRUPTION COMMISSION</p>
+  <hr className="w-12 border-white my-1" />
+  <p className="text-center text-xs">
+    Together, let's kick corruption out of <strong>Sierra Leone</strong>
+  </p>
+</div>
 
-          <p className="fw-bold">LOGIN</p>
-          <p>Welcome to the ACC asset declaration platform...</p>
+{/* Right Section */}
+<div className="bg-white text-gray-800 flex flex-col items-center justify-center p-6 rounded-r-lg w-full sm:w-auto">
+  <p className="font-bold text-blue-600 text-lg">ASSET DECLARATION</p>
+  <hr className="w-16 border-blue-500 my-2" />
 
-          {/* Email Input Field with Icon */}
-          <div className="mb-3">
-            <div className="input-group">
-              <span className="input-group-text bg-white border-end-0">
-                <FaEnvelope className="text-secondary" />
-              </span>
-              <input
-                type="email"
-                className="form-control border-start-0"
-                placeholder="Enter email / mobile"
-              />
-            </div>
-          </div>
+  <p className="font-bold mt-2">LOGIN</p>
+  <p className="text-sm text-gray-600 text-center whitespace-nowrap">
+  Welcome to the ACC asset declaration platform...
+</p>
 
-          {/* Password Input Field with Icon */}
-          <div className="mb-3">
-            <div className="input-group">
-              <span className="input-group-text bg-white border-end-0">
-                <FaLock className="text-secondary" />
-              </span>
-              <input
-                type="password"
-                className="form-control border-start-0"
-                placeholder="Enter password"
-              />
-            </div>
-          </div>
+  {/* Email Input */}
+<div className="w-full mt-4 flex justify-start"> {/* Aligns input to the left */}
+  <div className="flex items-center border border-gray-300 rounded-md overflow-hidden h-12 w-96">
+    <span className="bg-white px-3">
+      <FaEnvelope className="text-gray-500 text-sm" />
+    </span>
+    <input
+      type="email"
+      className="w-full p-2 text-sm outline-none"
+      placeholder="Enter email / mobile"
+    />
+  </div>
+</div>
 
-          {/* Links & Register Section */}
-          <div className="d-flex justify-content-between align-items-center mt-3">
-            <a href="#" className="text-secondary small">Forgot Password?</a>
-            <div className="d-flex align-items-center">
-              <span className="fw-bold me-1">Have an account?</span>
-              <a href="#" className="text-primary fw-bold">Register</a>
-            </div>
-          </div>
+{/* Password Input */}
+<div className="w-full mt-3 flex justify-start"> {/* Aligns input to the left */}
+  <div className="flex items-center border border-gray-300 rounded-md overflow-hidden h-12 w-96">
+    <span className="bg-white px-3">
+      <FaLock className="text-gray-500 text-sm" />
+    </span>
+    <input
+      type="password"
+      className="w-full p-2 text-sm outline-none"
+      placeholder="Enter password"
+    />
+  </div>
+</div>
 
-          {/* Continue Button */}
-          <button className="btn btn-outline-primary w-50 mt-3">
-            Continue
-          </button>
-        </div>
+
+  {/* Forgot Password & Register */}
+  <div className="flex justify-between items-center w-full text-xs sm:text-sm mt-3 text-gray-600 whitespace-nowrap">
+    <a href="#" className="hover:text-blue-500 mr-6">Forgot Password</a> {/* Added margin-right */}
+    <div className="flex items-center space-x-2"> {/* Increased spacing */}
+      <span className="font-bold">Have an account?</span>
+      <a href="#" className="text-blue-500 font-bold">Register</a>
+    </div>
+</div>
+
+
+  {/* Continue Button */}
+
+  <button className="relative inline-flex items-center justify-center p-0.5 mt-4 mb-2 mr-2 
+  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group 
+  bg-gradient-to-br from-purple-600 to-blue-500 
+  group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white 
+  dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+  
+  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 
+    bg-white dark:bg-gray-900 rounded-md 
+    group-hover:bg-transparent group-hover:dark:bg-transparent">
+    Continue
+  </span>
+</button>
+
+
+
+</div>
+
       </div>
     </div>
   );
