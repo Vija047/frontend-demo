@@ -65,7 +65,7 @@ function Login() {
     <a href="#" className="hover:text-blue-500 mr-6">Forgot Password</a> {/* Added margin-right */}
     <div className="flex items-center space-x-2"> {/* Increased spacing */}
       <span className="font-bold">Have an account?</span>
-      <a href="#" className="text-blue-500 font-bold">Register</a>
+      <a href="/register" className="text-blue-500 font-bold">Register</a>
     </div>
 </div>
 
