@@ -104,9 +104,9 @@ function RegisterForm() {
 
           <button
             type="submit"
-            className="w-full bg-red-500 text-white p-2 rounded-lg mt-4 text-lg font-semibold hover:bg-red-600"
+            className="w-full bg-blue-500 text-white p-2 rounded-lg mt-4 text-lg font-semibold hover:bg-red-600"
           >
-            Register →
+            Register 
           </button>
         </form>
       </div>
